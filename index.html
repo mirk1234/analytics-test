@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Google Analytics</title>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+
+    <h1>Тестова сторінка для Google Analytics</h1>
+    <p>Використовуйте елементи нижче для перевірки відстеження подій та переходів.</p>
+
+    <!-- Робоче посилання -->
+    <div style="margin: 20px;">
+        <a href="https://www.google.com" target="_blank" id="test-link" style="font-size: 18px; color: #1a73e8;">
+            Перейти на Google (Робоче посилання)
+        </a>
+    </div>
+
+    <!-- Кнопка з відстеженням кастомної події -->
+    <div style="margin: 20px;">
+        <button id="test-button" onclick="sendTestEvent()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+            Натисни мене (Тестова кнопка)
+        </button>
+    </div>
+
+    <script>
+      function sendTestEvent() {
+        // Відправка кастомної події в Google Analytics при кліку на кнопку
+        gtag('event', 'button_click', {
+          'event_category': 'engagement',
+          'event_label': 'Test Button Clicked'
+        });
+        alert('Подію надслано в Google Analytics!');
+      }
+    </script>
+
+</body>
+</html>
