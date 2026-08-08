@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест Google Analytics</title>
-
+    <title>Тестова сторінка</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+<body>
 
-    <h1>Тестова сторінка для Google Analytics</h1>
-    <p>Використовуйте елементи нижче для перевірки відстеження подій та переходів.</p>
+    <div class="card">
+        <h1>Тестова сторінка</h1>
+        <p>Використовуйте елементи нижче для тестування.</p>
 
-    <!-- Робоче посилання -->
-    <div style="margin: 20px;">
-        <a href="https://www.google.com" target="_blank" id="test-link" style="font-size: 18px; color: #1a73e8;">
-            Перейти на Google (Робоче посилання)
-        </a>
+        <div class="actions">
+            <!-- Робоче посилання -->
+            <a href="https://www.google.com" target="_blank" id="test-link" class="btn btn-link">
+                Перейти на Google
+            </a>
+
+            <!-- Тестова кнопка -->
+            <button id="test-button" class="btn btn-primary">
+                Натисни мене
+            </button>
+        </div>
     </div>
-
-    <!-- Кнопка з відстеженням кастомної події -->
-    <div style="margin: 20px;">
-        <button id="test-button" onclick="sendTestEvent()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
-            Натисни мене (Тестова кнопка)
-        </button>
-    </div>
-
-  
 
 </body>
 </html>
